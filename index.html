@@ -1,0 +1,30 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="/dist/output.css" rel="stylesheet">
+  <link rel="manifest" href="manifest.json">
+  <link rel="icon" href="https://th.bing.com/th/id/OIP.PbOH-VnQxjTLsmIAQki9pQHaHa?dpr=2&pid=ImgDetMain.png">
+  <script>
+    if ("serviceWorker" in navigator) {
+        navigator.serviceWorker
+          .register("/sw.js")
+          .then(function (registration) {
+            console.log(
+              "Service worker terdaftar dengan skop: ",
+              registration.scope
+            );
+          })
+          .catch(function (error) {
+            console.log("Service worker gagal terdaftar: ", error);
+          });
+      } else {
+        console.log("Browser tidak mendukung service worker");
+      }
+  </script>
+</head>
+<body class="h-screen flex justify-center items-center bg-black">
+  <a href="https://beta.character.ai/" class="text-white border-2 border-white p-2 rounded-lg text-xl">Click Here</a>
+</body>
+</html>
